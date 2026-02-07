@@ -7,9 +7,7 @@ from typing import List
 import models, schemas, auth, database
 from database import engine
 
-# Create tables (Alembic will be used later, but this helps initial dev)
-# models.Base.metadata.create_all(bind=engine)
-
+# Welcome to the Hotel Admin API
 app = FastAPI(title="Hotel Admin API")
 
 # CORS middleware
@@ -40,7 +38,7 @@ async def login_for_access_token(db: Session = Depends(database.get_db), form_da
     if not user or not auth.verify_password(form_data.password, user.hashed_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
+            detail="Incorrect username or password. Please check your credentials.",
             headers={"WWW-Authenticate": "Bearer"},
         )
     access_token = auth.create_access_token(data={"sub": user.username})
@@ -75,7 +73,7 @@ def read_hotels(db: Session = Depends(database.get_db), current_user: models.Use
 def read_hotel(hotel_id: int, db: Session = Depends(database.get_db), current_user: models.User = Depends(auth.get_current_user)):
     db_hotel = db.query(models.Hotel).filter(models.Hotel.id == hotel_id).first()
     if db_hotel is None:
-        raise HTTPException(status_code=404, detail="Hotel not found")
+        raise HTTPException(status_code=404, detail="Hotel not found.")
     
     # Calculate effective rates for room types
     for rt in db_hotel.room_types:

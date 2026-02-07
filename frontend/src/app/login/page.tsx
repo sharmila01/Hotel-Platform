@@ -34,8 +34,8 @@ const LoginPage = () => {
         <div className="login-wrapper">
             <div className="card login-card animate-fade-in">
                 <div className="login-header">
-                    <h1>Welcome Back</h1>
-                    <p className="text-muted">Sign in to manage your hotels</p>
+                    <h1>Hi there! Welcome Back</h1>
+                    <p className="text-muted">Please sign in to manage our beautiful hotels</p>
                 </div>
                 
                 {error && (
@@ -70,7 +70,7 @@ const LoginPage = () => {
                         />
                     </div>
                     <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }} disabled={loading}>
-                        {loading ? 'Signing in...' : 'Sign In'}
+                        {loading ? 'Wait a bit, signing in...' : 'Sign In Now'}
                     </button>
                 </form>
 

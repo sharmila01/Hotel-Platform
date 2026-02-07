@@ -127,15 +127,15 @@ const HotelDetailPage = () => {
             <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
                     <h1>{hotel.name}</h1>
-                    <p className="hotel-location">{hotel.location}</p>
+                    <p className="hotel-location">Located in: {hotel.location}</p>
                 </div>
                 <span className={`badge badge-${hotel.status}`}>{hotel.status}</span>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '2rem 0 1rem' }}>
-                <h2>Room Types & Pricing</h2>
+                <h2>Our Room Types & Special Rates 🛏️</h2>
                 <button onClick={() => setShowRoomTypeForm(true)} className="btn btn-primary btn-sm">
-                    + Add Room Type
+                    + New Room Type
                 </button>
             </div>
 
