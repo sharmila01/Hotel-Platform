@@ -64,15 +64,15 @@ const HotelsPage = () => {
     return (
         <div className="animate-fade-in">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-                <h1>Our Beautiful Hotels</h1>
+                <h1>Manage Hotels</h1>
                 <button onClick={() => setShowAddModal(true)} className="btn btn-primary">
-                    + Add New Hotel
+                    + Add Hotel
                 </button>
             </div>
 
             {showAddModal && (
                 <div className="card" style={{ marginBottom: '2rem', border: '2px solid var(--primary)' }}>
-                    <h3 style={{ marginBottom: '1rem' }}>Add a New Hotel Choice</h3>
+                    <h3 style={{ marginBottom: '1rem' }}>Add New Hotel</h3>
                     <form onSubmit={handleAddHotel} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         <div className="form-group" style={{ flex: 1, minWidth: '200px' }}>
                             <label>Hotel Name</label>

@@ -6,7 +6,7 @@ This is my submission for the Senior Full-Stack Assessment. I've built a minimal
 
 ### Backend (FastAPI)
 1. **Navigate to backend folder:** `cd backend`
-2. **Setup virtual environment:** `python -m venv venv` and activate it.
+2. **Setup virtual environment:** `python -m venv venv2` and activate it.
 3. **Install dependencies:** `pip install -r requirements.txt`
 4. **Run migrations:** `alembic upgrade head`
 5. **Seed the database:** `python seed.py`
@@ -16,7 +16,7 @@ This is my submission for the Senior Full-Stack Assessment. I've built a minimal
 1. **Navigate to frontend folder:** `cd frontend`
 2. **Install the goodies:** `npm install`
 3. **Start the magic:** `npm run dev`
-4. **Visit:** `http://localhost:3000`
+4. **Visit:** `http://localhost:3006`
 
 ---
 
@@ -36,7 +36,7 @@ This is my submission for the Senior Full-Stack Assessment. I've built a minimal
    - **Username:** `admin`
    - **Password:** `admin123`
 2. **Rate Adjustments:** I assumed that rate adjustments are "effective from" a specific date. The system automatically picks the **latest relevant adjustment** for the current date.
-3. **Currency:** Everything is in Dollars ($) for now, but we can easily change to LKR if needed! ;)
+3. **Currency:** Everything is in Dollars ($) for now!
 
 ---
 
@@ -44,18 +44,18 @@ This is my submission for the Senior Full-Stack Assessment. I've built a minimal
 
 - **Local Storage:** I used SQLite to make it easy for you to run without setting up a huge PostgreSQL server.
 - **Single Token:** I used a simple access token (JWT) without refresh tokens to keep the assessment scope manageable.
-- **Styling:** I used Vanilla CSS/Next.js styles to keep it lightweight and fast, skipping heavy libraries like Tailwind for this specific task.
+- **Styling:** I used Vanilla CSS/Next.js styles for maximum speed and simplicity.
 
 ---
 
 ## Assessment Requirements Check
 
 - [x] Backend: FastAPI + SQLAlchemy + Alembic
-- [x] Frontend: Next.js (Vite/Next)
+- [x] Frontend: Next.js
 - [x] Auth: JWT Login
 - [x] CRUD: Hotel & Room Type management
 - [x] Logic: `effective_rate = base_rate + adjustment`
 - [x] Migrations: Initial + follow-up (status field added)
 - [x] README: (You are reading it!)
 
-Hope you like the work! If you have any questions, just ask me, okay?
+Hope you like the work!

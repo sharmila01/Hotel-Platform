@@ -1,9 +1,31 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/venv2/
+.env
+.env.local
+
+# Next.js
+.next/
+out/
+build/
+*.log
+
+# Databases
+backend/*.db
+backend/*.db-journal
+
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
 
-# Virtual environments
-venv/
-venv2/
-env/
-.env/
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
